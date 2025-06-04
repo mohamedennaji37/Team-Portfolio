@@ -1572,3 +1572,37 @@ ul {
     font-size: 1.25rem;
   }
 }
+/* --- Dark Mode Fixes for Contact Section --- */
+
+[data-theme="dark"] .contact-methods
+{
+  color: black;
+
+}
+[data-theme="dark"] .method-value {
+  color: rgb(91, 90, 90);
+}
+
+[data-theme="dark"] .method-title {
+  color: black;
+}
+[data-theme="dark"] .hours-section
+{
+  color: black;
+
+}
+[data-theme="dark"] .hours-list {
+  color: rgb(91, 90, 90);
+}
+
+[data-theme="dark"] .hours-section h3 {
+  color: black;
+}
+[data-theme="dark"] .contact-info-content h3 {
+  color: black;
+}
+
+
+[data-theme="dark"] .social-section{
+  color: black;
+}
