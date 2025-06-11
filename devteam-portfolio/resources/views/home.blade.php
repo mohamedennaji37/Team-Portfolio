@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevTeam - Web Development Portfolio</title>
+  <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <div class="logo">
+          <span data-translate="logo">DevTeam</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+          <button class="nav-link active" data-section="home" data-translate="nav-home">Home</button>
+          <button class="nav-link" data-section="services" data-translate="nav-services">Services</button>
+          <button class="nav-link" data-section="work" data-translate="nav-work">Work</button>
+          <button class="nav-link" data-section="pricing-model" data-translate="nav-pricing">Pricing</button>
+          <button class="nav-link" data-section="team" data-translate="nav-team">Team</button>
+          <button class="nav-link" data-section="contact" data-translate="nav-contact">Contact</button>
+        </div>
+
+        <!-- Global Controls -->
+        <div class="global-controls">
+          <!-- Language Switcher -->
+          <div class="language-switcher">
+            <button class="language-btn" id="languageBtn">
+              <i class="fas fa-globe"></i>
+              <span class="current-lang">EN</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="language-dropdown" id="languageDropdown">
+              <button class="language-option" data-lang="en">
+                <span class="flag">🇺🇸</span>
+                <span>English</span>
+              </button>
+              <button class="language-option" data-lang="fr">
+                <span class="flag">🇫🇷</span>
+                <span>Français</span>
+              </button>
+              <button class="language-option" data-lang="ar">
+                <span class="flag">🇸🇦</span>
+                <span>العربية</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Dark Mode Toggle -->
+          <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+            <div class="toggle-track">
+              <div class="toggle-thumb">
+                <i class="fas fa-sun sun-icon"></i>
+                <i class="fas fa-moon moon-icon"></i>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-menu">
+      <button class="nav-link" data-section="home" data-translate="nav-home">Home</button>
+      <button class="nav-link" data-section="services" data-translate="nav-services">Services</button>
+      <button class="nav-link" data-section="work" data-translate="nav-work">Work</button>
+      <button class="nav-link" data-section="pricing-model" data-translate="nav-pricing">Pricing</button>
+      <button class="nav-link" data-section="team" data-translate="nav-team">Team</button>
+      <button class="nav-link" data-section="contact" data-translate="nav-contact">Contact</button>
+      
+      <!-- Mobile Global Controls -->
+      <div class="mobile-global-controls">
+        <div class="mobile-language-switcher">
+          <span data-translate="language-label">Language:</span>
+          <div class="mobile-language-options">
+            <button class="mobile-language-option" data-lang="en">🇺🇸 EN</button>
+            <button class="mobile-language-option" data-lang="fr">🇫🇷 FR</button>
+            <button class="mobile-language-option" data-lang="ar">🇸🇦 AR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1>
+          <span data-translate="hero-title-1">Your Vision, Our Code:</span>
+          <span class="gradient-text" data-translate="hero-title-2">Building Exceptional Web & App Experiences</span>
+        </h1>
+        <p class="hero-description" data-translate="hero-description">
+          We're a passionate team of three developers who transform innovative ideas into powerful, scalable web
+          applications and mobile solutions that drive business growth.
+        </p>
+
+        <div class="cta-buttons">
+          <button class="btn btn-primary" data-section="work">
+            <span data-translate="cta-view-work">View Our Work</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+          <button class="btn btn-outline" data-section="contact">
+            <span data-translate="cta-get-quote">Get a Quote</span>
+          </button>
+        </div>
+
+        <!-- Hero Image Placeholder -->
+        <div class="hero-image-container">
+          <div class="hero-image-wrapper">
+            <img src="https://placehold.co/800x400" alt="Team collaboration workspace" class="hero-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-translate="services-title">Our Services</h2>
+        <p data-translate="services-subtitle">Comprehensive web and mobile development solutions tailored to your business needs</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 data-translate="service-web-title">Custom Web Development</h3>
+          <p data-translate="service-web-desc">Full-stack web applications built with modern frameworks like React, Next.js, and Node.js for optimal performance and scalability.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3 data-translate="service-mobile-title">Mobile App Development</h3>
+          <p data-translate="service-mobile-desc">Native and cross-platform mobile applications that deliver exceptional user experiences across iOS and Android devices.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 data-translate="service-design-title">UI/UX Design</h3>
+          <p data-translate="service-design-desc">User-centered design solutions that combine aesthetic appeal with intuitive functionality to maximize user engagement.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-wrench"></i>
+          </div>
+          <h3 data-translate="service-support-title">Maintenance & Support</h3>
+          <p data-translate="service-support-desc">Ongoing technical support, updates, and optimization to ensure your applications remain secure and performant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing-model" class="pricing-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-translate="pricing-plans-title">Our Pricing Plans</h2>
+        <p data-translate="pricing-plans-subtitle">Transparent and flexible pricing options to suit your project needs</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3 data-translate="pricing-basic-title">Basic</h3>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">1,499</span>
+              <span class="period">/ <span data-translate="pricing-period">project</span></span>
+            </div>
+            <p data-translate="pricing-basic-desc">Perfect for small businesses just getting started</p>
+          </div>
+          <div class="pricing-features">
+            <ul>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-basic-feature-1">5-page responsive website</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-basic-feature-2">Basic SEO optimization</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-basic-feature-3">Contact form integration</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-basic-feature-4">Mobile-friendly design</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-basic-feature-5">1 month of support</span></li>
+              <li class="disabled"><i class="fas fa-times"></i> <span data-translate="pricing-basic-feature-6">Custom functionality</span></li>
+              <li class="disabled"><i class="fas fa-times"></i> <span data-translate="pricing-basic-feature-7">E-commerce features</span></li>
+              <li class="disabled"><i class="fas fa-times"></i> <span data-translate="pricing-basic-feature-8">Performance optimization</span></li>
+            </ul>
+          </div>
+          <div class="pricing-footer">
+            <button class="btn btn-outline" data-section="contact" data-translate="pricing-get-started">Get Started</button>
+          </div>
+        </div>
+
+        <div class="pricing-card popular">
+          <div class="popular-badge" data-translate="pricing-popular">Most Popular</div>
+          <div class="pricing-header">
+            <h3 data-translate="pricing-professional-title">Professional</h3>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">3,999</span>
+              <span class="period">/ <span data-translate="pricing-period">project</span></span>
+            </div>
+            <p data-translate="pricing-professional-desc">Ideal for growing businesses with specific needs</p>
+          </div>
+          <div class="pricing-features">
+            <ul>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-professional-feature-1">10-page responsive website</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-professional-feature-2">Advanced SEO optimization</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-professional-feature-3">Contact form integration</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-professional-feature-4">Mobile-friendly design</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-professional-feature-5">3 months of support</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-professional-feature-6">Custom functionality</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-professional-feature-7">Basic e-commerce features</span></li>
+              <li class="disabled"><i class="fas fa-times"></i> <span data-translate="pricing-professional-feature-8">Performance optimization</span></li>
+            </ul>
+          </div>
+          <div class="pricing-footer">
+            <button class="btn btn-primary" data-section="contact" data-translate="pricing-get-started">Get Started</button>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3 data-translate="pricing-enterprise-title">Enterprise</h3>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">7,999</span>
+              <span class="period">/ <span data-translate="pricing-period">project</span></span>
+            </div>
+            <p data-translate="pricing-enterprise-desc">Complete solution for large businesses and complex projects</p>
+          </div>
+          <div class="pricing-features">
+            <ul>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-enterprise-feature-1">Unlimited pages</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-enterprise-feature-2">Premium SEO optimization</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-enterprise-feature-3">Advanced form integration</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-enterprise-feature-4">Mobile-friendly design</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-enterprise-feature-5">12 months of support</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-enterprise-feature-6">Custom functionality</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-enterprise-feature-7">Full e-commerce solution</span></li>
+              <li><i class="fas fa-check"></i> <span data-translate="pricing-enterprise-feature-8">Performance optimization</span></li>
+            </ul>
+          </div>
+          <div class="pricing-footer">
+            <button class="btn btn-outline" data-section="contact" data-translate="pricing-get-started">Get Started</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-pricing">
+        <div class="custom-pricing-content">
+          <h3 data-translate="pricing-custom-title">Need a custom solution?</h3>
+          <p data-translate="pricing-custom-desc">We offer tailored packages for unique project requirements</p>
+          <button class="btn btn-primary" data-section="contact" data-translate="contact-us">Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="work" class="projects-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-translate="work-title">Our Work</h2>
+        <p data-translate="work-subtitle">Showcasing our best projects that demonstrate our expertise and deliver measurable results</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://placehold.co/400x300" alt="E-Commerce Platform">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3 data-translate="project-1-title">E-Commerce Platform</h3>
+            <p data-translate="project-1-desc">Modern e-commerce solution with advanced inventory management and payment processing.</p>
+            <div class="project-tech">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">Stripe</span>
+            </div>
+            <div class="project-result">
+              <i class="fas fa-star"></i>
+              <span data-translate="project-1-result">300% increase in conversion rate</span>
+            </div>
+            <button class="btn btn-outline">
+              <span data-translate="view-case-study">View Case Study</span>
+              <i class="fas fa-external-link-alt"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://placehold.co/400x300" alt="Healthcare Management System">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3 data-translate="project-2-title">Healthcare Management System</h3>
+            <p data-translate="project-2-desc">Comprehensive patient management platform with real-time scheduling and telemedicine features.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Vue.js</span>
+              <span class="tech-badge">Django</span>
+              <span class="tech-badge">MongoDB</span>
+              <span class="tech-badge">WebRTC</span>
+            </div>
+            <div class="project-result">
+              <i class="fas fa-star"></i>
+              <span data-translate="project-2-result">50% reduction in appointment scheduling time</span>
+            </div>
+            <button class="btn btn-outline">
+              <span data-translate="view-case-study">View Case Study</span>
+              <i class="fas fa-external-link-alt"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://placehold.co/400x300" alt="Financial Dashboard">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3 data-translate="project-3-title">Financial Dashboard</h3>
+            <p data-translate="project-3-desc">Real-time analytics dashboard for investment tracking and portfolio management with advanced charting.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Next.js</span>
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Redis</span>
+              <span class="tech-badge">D3.js</span>
+            </div>
+            <div class="project-result">
+              <i class="fas fa-star"></i>
+              <span data-translate="project-3-result">Real-time data processing for 10,000+ users</span>
+            </div>
+            <button class="btn btn-outline">
+              <span data-translate="view-case-study">View Case Study</span>
+              <i class="fas fa-external-link-alt"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="team-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-translate="team-title">Meet Our Team</h2>
+        <p data-translate="team-subtitle">Three passionate developers dedicated to bringing your vision to life</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-image">
+            <img src="https://placehold.co/300x300" alt="Alex Johnson">
+          </div>
+          <div class="team-content">
+            <h3 data-translate="team-member-1-name">Alex Johnson</h3>
+            <p class="team-role" data-translate="team-member-1-role">Full-Stack Developer & Team Lead</p>
+            <p data-translate="team-member-1-bio">5+ years of experience in React, Node.js, and cloud architecture. Passionate about creating scalable solutions and leading development teams.</p>
+            <div class="team-skills">
+              <span class="skill-badge">React</span>
+              <span class="skill-badge">Node.js</span>
+              <span class="skill-badge">AWS</span>
+              <span class="skill-badge">TypeScript</span>
+              <span class="skill-badge">PostgreSQL</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-image">
+            <img src="https://placehold.co/300x300" alt="Maria Rodriguez">
+          </div>
+          <div class="team-content">
+            <h3 data-translate="team-member-2-name">Maria Rodriguez</h3>
+            <p class="team-role" data-translate="team-member-2-role">Frontend Specialist</p>
+            <p data-translate="team-member-2-bio">Expert in modern frontend frameworks and responsive design. Specializes in creating beautiful, user-friendly interfaces that convert.</p>
+            <div class="team-skills">
+              <span class="skill-badge">Vue.js</span>
+              <span class="skill-badge">React</span>
+              <span class="skill-badge">CSS3</span>
+              <span class="skill-badge">Tailwind</span>
+              <span class="skill-badge">JavaScript</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-image">
+            <img src="https://placehold.co/300x300" alt="David Chen">
+          </div>
+          <div class="team-content">
+            <h3 data-translate="team-member-3-name">David Chen</h3>
+            <p class="team-role" data-translate="team-member-3-role">UI/UX Designer & Frontend Developer</p>
+            <p data-translate="team-member-3-bio">Combines design thinking with technical skills to create exceptional user experiences. Expert in user research and interface design.</p>
+            <div class="team-skills">
+              <span class="skill-badge">Figma</span>
+              <span class="skill-badge">Adobe XD</span>
+              <span class="skill-badge">HTML/CSS</span>
+              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">User Research</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Expertise Section -->
+  <section class="tech-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-translate="tech-title">Technical Expertise</h2>
+        <p data-translate="tech-subtitle">Our comprehensive technology stack enables us to build robust, scalable solutions</p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h3 data-translate="tech-languages">Programming Languages</h3>
+          <div class="tech-badges">
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">TypeScript</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Go</span>
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">CSS3</span>
+          </div>
+        </div>
+
+        <div class="tech-card">
+          <h3 data-translate="tech-frontend">Frontend Frameworks</h3>
+          <div class="tech-badges">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Next.js</span>
+            <span class="tech-badge">Vue.js</span>
+            <span class="tech-badge">Angular</span>
+            <span class="tech-badge">Svelte</span>
+          </div>
+        </div>
+
+        <div class="tech-card">
+          <h3 data-translate="tech-backend">Backend Technologies</h3>
+          <div class="tech-badges">
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">Django</span>
+            <span class="tech-badge">Flask</span>
+            <span class="tech-badge">Express.js</span>
+            <span class="tech-badge">FastAPI</span>
+          </div>
+        </div>
+
+        <div class="tech-card">
+          <h3 data-translate="tech-databases">Databases</h3>
+          <div class="tech-badges">
+            <span class="tech-badge">PostgreSQL</span>
+            <span class="tech-badge">MongoDB</span>
+            <span class="tech-badge">Redis</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">Firebase</span>
+          </div>
+        </div>
+
+        <div class="tech-card">
+          <h3 data-translate="tech-cloud">Cloud Platforms</h3>
+          <div class="tech-badges">
+            <span class="tech-badge">AWS</span>
+            <span class="tech-badge">Google Cloud</span>
+            <span class="tech-badge">Azure</span>
+            <span class="tech-badge">Vercel</span>
+            <span class="tech-badge">Netlify</span>
+          </div>
+        </div>
+
+        <div class="tech-card">
+          <h3 data-translate="tech-tools">Tools & Software</h3>
+          <div class="tech-badges">
+            <span class="tech-badge">Docker</span>
+            <span class="tech-badge">Git</span>
+            <span class="tech-badge">Figma</span>
+            <span class="tech-badge">VS Code</span>
+            <span class="tech-badge">Webpack</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-translate="testimonials-title">Client Testimonials</h2>
+        <p data-translate="testimonials-subtitle">Don't just take our word for it - hear what our clients have to say</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <blockquote data-translate="testimonial-1-quote">"The team delivered an exceptional e-commerce platform that exceeded our expectations. Our sales increased by 300% within the first quarter."</blockquote>
+          <div class="testimonial-author">
+            <p class="author-name" data-translate="testimonial-1-name">Sarah Johnson</p>
+            <p class="author-title" data-translate="testimonial-1-title">TechStyle Boutique, CEO</p>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <blockquote data-translate="testimonial-2-quote">"Professional, responsive, and incredibly skilled. They transformed our complex requirements into an intuitive healthcare management system."</blockquote>
+          <div class="testimonial-author">
+            <p class="author-name" data-translate="testimonial-2-name">Dr. Michael Rodriguez</p>
+            <p class="author-title" data-translate="testimonial-2-title">MedCare Clinic, Director</p>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <blockquote data-translate="testimonial-3-quote">"Outstanding work on our financial dashboard. The real-time analytics have revolutionized how we make investment decisions."</blockquote>
+          <div class="testimonial-author">
+            <p class="author-name" data-translate="testimonial-3-name">David Kim</p>
+            <p class="author-title" data-translate="testimonial-3-title">InvestPro Capital, CTO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header light">
+        <h2 data-translate="contact-title">Let's Build Something Amazing Together</h2>
+        <p data-translate="contact-subtitle">Ready to transform your ideas into reality? Get in touch and let's discuss your project.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+          <div class="contact-form-card">
+            <h3 data-translate="contact-form-title">Send us a message</h3>
+            <p data-translate="contact-form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
+            <form class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName" data-translate="form-first-name">First Name</label>
+                  <input type="text" id="firstName" data-translate-placeholder="form-first-name-placeholder" placeholder="John">
+                </div>
+                <div class="form-group">
+                  <label for="lastName" data-translate="form-last-name">Last Name</label>
+                  <input type="text" id="lastName" data-translate-placeholder="form-last-name-placeholder" placeholder="Doe">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email" data-translate="form-email">Email</label>
+                <input type="email" id="email" data-translate-placeholder="form-email-placeholder" placeholder="john@example.com">
+              </div>
+              <div class="form-group">
+                <label for="company" data-translate="form-company">Company (Optional)</label>
+                <input type="text" id="company" data-translate-placeholder="form-company-placeholder" placeholder="Your Company">
+              </div>
+              <div class="form-group">
+                <label for="message" data-translate="form-message">Project Details</label>
+                <textarea id="message" data-translate-placeholder="form-message-placeholder" placeholder="Tell us about your project, timeline, and budget..." rows="4"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                <span data-translate="form-submit">Send Message</span>
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <div class="contact-info-content">
+            <h3 data-translate="contact-info-title">Get in Touch</h3>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <p class="method-title" data-translate="contact-email-label">Email</p>
+                  <p class="method-value">hello@devteam.com</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <p class="method-title" data-translate="contact-phone-label">Phone</p>
+                  <p class="method-value">+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <p class="method-title" data-translate="contact-location-label">Location</p>
+                  <p class="method-value" data-translate="contact-location-value">San Francisco, CA</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-section">
+              <h4 data-translate="contact-follow-label">Follow Us</h4>
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+
+            <div class="hours-section">
+              <h4 data-translate="contact-hours-label">Office Hours</h4>
+              <div class="hours-list">
+                <p data-translate="contact-hours-weekdays">Monday - Friday: 9:00 AM - 6:00 PM PST</p>
+                <p data-translate="contact-hours-saturday">Saturday: 10:00 AM - 2:00 PM PST</p>
+                <p data-translate="contact-hours-sunday">Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo" data-translate="logo">DevTeam</div>
+          <p data-translate="footer-description">Transforming innovative ideas into powerful, scalable web applications and mobile solutions that drive
+            business growth.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-translate="footer-services-title">Services</h4>
+          <ul>
+            <li><a href="#" data-translate="footer-service-1">Web Development</a></li>
+            <li><a href="#" data-translate="footer-service-2">Mobile Apps</a></li>
+            <li><a href="#" data-translate="footer-service-3">UI/UX Design</a></li>
+            <li><a href="#" data-translate="footer-service-4">Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-translate="footer-company-title">Company</h4>
+          <ul>
+            <li><a href="#" data-translate="footer-company-1">About Us</a></li>
+            <li><a href="#" data-translate="footer-company-2">Our Work</a></li>
+            <li><a href="#" data-translate="footer-company-3">Contact</a></li>
+            <li><a href="#" data-translate="footer-company-4">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-translate="footer-copyright">&copy; 2024 DevTeam. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/+212645216348" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Contact us on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <script src="{{ asset('js/script.js') }}"></script>
+</body>
+</html>
+
